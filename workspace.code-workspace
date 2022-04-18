@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Media_torre_eiffel"
+		},
+		{
+			"path": "../Flechas"
+		},
+		{
+			"path": "../jueguito"
+		},
+		{
+			"path": "../../../../Platzi/pakiman"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Garcia_Juegos"
+	}
+}
