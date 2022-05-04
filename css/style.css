@@ -4,7 +4,7 @@
     font-family: Indie Flower, cursive;
     font-size: 20px;
     color:blue;
-    background-image: url('../img/background.jpeg');
+    background-image: url('../img/background_3.jpeg');
 }
 
 .header {
@@ -35,8 +35,15 @@
 
 .texto_inic {
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 300px;
     font-size: 30px;
+    background-color: #eff0e9;
 
+}
+
+.card_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
 }
 
