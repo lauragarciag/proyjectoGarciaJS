@@ -1,12 +1,12 @@
 let lg = document.getElementById("granjita");
 let papel = lg.getContext("2d");
 
-var teclas = {
+/*var teclas = {
 	UP: 38,
 	DOWN: 40,
 	LEFT: 37,
 	RIGHT: 39
-};
+};*/
 
 
 
@@ -49,7 +49,7 @@ let perro =
 };
 
 
-let cantidad = aleatorio(0, 10);
+let cantidad = aleatorio(1, 10);
 
 fondo.objeto = new Image();
 fondo.objeto.src = fondo.url;
@@ -71,7 +71,41 @@ perro.objeto = new Image();
 perro.objeto.src = perro.url;
 perro.objeto.addEventListener("load", cargarPerro);
 
+function validaPollo(){
+    i = 0;
+    while (i < cantidad) {
+        if(perro.x == pollo.x[i] && perro.y == pollo.y[i]){
+            console.log("PERDISTE POLLO");
+            alert("Perdiste por un POLLO");
+            cargarFondo();
+        }
+        i++;
+    }
+}
 
+function validaCerdo(){
+    i = 0;
+    while (i < cantidad) {
+        if(perro.x == cerdo.x[i] && perro.y == cerdo.y[i]){
+            console.log("PERDISTE CERDO");
+            alert("Perdiste por un CERDO");
+            cargarFondo();
+        }
+        i++;
+    }
+}
+
+function validaVaca(){
+    i = 0;
+    while (i < cantidad) {
+        if(perro.x == vaca.x[i] && perro.y == vaca.y[i]){
+            console.log("PERDISTE VACA")
+            alert("Perdiste por una VACA");
+            cargarFondo();
+        }
+        i++;
+    }
+}
 
 function cargarFondo()
 {
@@ -112,8 +146,6 @@ function dibujar()
 
     if(vaca.cargaOk)
     {
-
-        console.log(cantidad);
         for(let v=0; v < cantidad; v++)
         {
             let x= (aleatorio (0,7)*60);
@@ -126,8 +158,6 @@ function dibujar()
 
     if(pollo.cargaOk)
     {
-
-        console.log(cantidad);
         for(let p=0; p < cantidad; p++)
         {
             let x = (aleatorio (0,7)*60);
@@ -142,8 +172,6 @@ function dibujar()
 
     if(cerdo.cargaOk)
         {
-    
-            console.log(cantidad);
             for(let c=0; c < cantidad; c++)
             {
                 let x = (aleatorio (0,7)*60);
@@ -190,7 +218,6 @@ function dibujar()
            for( let v = 0; v < cantidad; v++)
           {
               papel.drawImage(vaca.objeto , vaca.x[v] , vaca.y[v]);
-              console.log(cantidad);
           }
        }
        if(pollo.cargaOk)
@@ -198,7 +225,6 @@ function dibujar()
            for( let p = 0; p < cantidad; p++)
           {
               papel.drawImage(pollo.objeto , pollo.x[p] , pollo.y[p]);
-              console.log(cantidad);
           }
        }
 
@@ -207,7 +233,6 @@ function dibujar()
            for( let c = 0; c < cantidad; c++)
           {
               papel.drawImage(cerdo.objeto , cerdo.x[c] , cerdo.y[c]);
-              console.log(cantidad);
           }
        }
   }
@@ -218,28 +243,44 @@ function dibujar()
 			var movimiento = 10;
 			switch (evento.keyCode)
 		{
-			case teclas.UP:
+			//case teclas.UP:
+            case 38:
+                validaPollo();
+                validaCerdo();
+                validaVaca();
 				dibujarOtraVez();
+                perro.y = perro.y - movimiento;
 				moverPerro(perro.x,perro.y);
-				perro.y = perro.y - movimiento;
 			break;
-			case teclas.DOWN:
+			//case teclas.DOWN:
+            case 40:
+                validaPollo();
+                validaCerdo();
+                validaVaca();                
 				dibujarOtraVez();
-				moverPerro(perro.x,perro.y);
-				perro.y = perro.y + movimiento;				
+                perro.y = perro.y + movimiento; 
+				moverPerro(perro.x,perro.y);			
 			break;
-			case teclas.LEFT:
+			//case teclas.LEFT:
+            case 37:
+                validaPollo();
+                validaCerdo();
+                validaVaca();
 				dibujarOtraVez();
-				moverPerro(perro.x,perro.y);
-				perro.x = perro.x - movimiento;				
+                perro.x = perro.x - movimiento; 
+				moverPerro(perro.x,perro.y);			
 			break;
-			case teclas.RIGHT:
+			//case teclas.RIGHT:
+            case 39:
+                validaPollo();
+                validaCerdo();
+                validaVaca();
 				dibujarOtraVez();
+                perro.x = perro.x + movimiento;
 				moverPerro(perro.x,perro.y);
-				perro.x = perro.x + movimiento;				
 			break;
 			default:
 				console.log("Otra tecla");
 			break;
 		}	
-	}	
+	}
