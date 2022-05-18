@@ -17,11 +17,11 @@ window.onload = function () {
         constructor: MouseGame,
 
         /**
-         
-          @param  {String} elem
-         @example
-         
-         @return {NodeList}     
+         *
+         * @param  {String} elem
+         * @example
+         * $('div') | $('p.active')
+         * @return {NodeList}
          */
         $: function (elem) {
             return document.querySelectorAll(elem);
@@ -29,19 +29,19 @@ window.onload = function () {
 
         /**
          * 
-         * @param  {Number} from inicio
-         * @param  {Number} to   fin
-         * @return {Number}      aleatorio
+         * @param  {Number} from
+         * @param  {Number} to  
+         * @return {Number}     
          */
         getRandom: function (from, to) {
             return Math.floor(Math.random() * (to - from + 1)) + from + 1;
         },
 
         /**
-        
-          @param  {HTMLElement} elem 
-          @param  {String} val  
-          @return {String}      
+         * 
+         * @param  {HTMLElement} elem 
+         * @param  {String} val  
+         * @return {String}     
          */
         text: function (elem, val) {
             if (elem.textContent) {
@@ -51,11 +51,11 @@ window.onload = function () {
             }
         },
 
-        // 
+        //
         moveUpAndDown: function () {
             var that = this;
 
-             
+            
             that.moveTime = setInterval(function () {
 
                 for (var i = 0, j = that.mouses.length; i < j; ++i) {
