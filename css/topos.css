@@ -77,7 +77,7 @@ input{
     width: 100%;
     border-top: 1px solid #ddd;
     background-color: #ddf;
-    background-image: url("/pages/images/background.jpg");
+    background-image: url("../pages/images/background.jpg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100% 100%;
@@ -110,7 +110,7 @@ input{
     width: 28px;
     height: 26px;
     border-radius: 50%/40%;
-    background-image: url("/pages/images/topo.png");
+    background-image: url("../pages/images/topo.png");
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100% 100%;
