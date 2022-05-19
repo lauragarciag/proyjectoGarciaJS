@@ -1,14 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&display=swap');
 .allBody {
     font-family: Caveat, cursive;
     font-family: Indie Flower, cursive;
     font-size: 20px;
-    color: white;
-    background-color: white;
+    color:blue;
+    background-image: url('/img/background_3.jpeg');
 }
 
 .header {
