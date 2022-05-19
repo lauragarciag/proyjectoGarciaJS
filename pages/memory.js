@@ -2,11 +2,11 @@ const cards = Array.from(document.querySelectorAll(".card"));
 const cardsCont = document.querySelector(".m-cont__flex");
 const clicksBox = document.querySelector(".clicks-box__clicks");
 const srcs = [
-  "/img/card_0.png",
-  "/img/card_1.png",
-  "/img/card_2.png",
-  "/img/card_3.png",
-  "/img/card_4.png",
+  "images/card_0.png",
+  "images/card_1.png",
+  "images/card_2.png",
+  "images/card_3.png",
+  "images/card_4.png",
 ];
 
 const randomNum = (max, min) => Math.round(Math.random() * (max - min) + min);
