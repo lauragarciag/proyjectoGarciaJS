@@ -39,6 +39,13 @@
   align-items: space-around;
 }
 
+.tClick {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
 
 div img {
   width: 100%;
