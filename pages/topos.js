@@ -53,12 +53,12 @@ window.onload = function () {
 
         //
         moveUpAndDown: function () {
-            var that = this;
+            let that = this;
 
             
             that.moveTime = setInterval(function () {
 
-                for (var i = 0, j = that.mouses.length; i < j; ++i) {
+                for (let i = 0, j = that.mouses.length; i < j; ++i) {
                     that.mouses[i].setAttribute('clicked', '0');
                     that.mouses[i].className = 'hamster active';
                     that.mouses[i].style.display = 'none';
@@ -66,7 +66,7 @@ window.onload = function () {
 
                 
                 var showNum = that.getRandom(0, 9);
-                for (var i = 0; i < showNum; i++) {
+                for (let i = 0; i < showNum; i++) {
                     that.mouses[that.getRandom(0, 59)].style.display = 'block';
                 }
             }, 2000);
@@ -74,7 +74,7 @@ window.onload = function () {
 
         
         bindEvent: function () {
-            var that = this;
+            let that = this;
 
             
             that.gameStart[0].addEventListener('click', function () {
@@ -85,7 +85,7 @@ window.onload = function () {
             
             that.mousesWrap[0].addEventListener('click', function (e) {
                 e = e || window.event;
-                var elem = e.target
+                let elem = e.target
 
                 
                 if (elem.getAttribute('clicked') === '1') {
@@ -109,9 +109,9 @@ window.onload = function () {
 
         
         countDown: function () {
-            var that = this;
+            let that = this;
             that.text(that.gameState[0], "Playing");
-            var t = setInterval(function () {
+            let t = setInterval(function () {
                 that.text(that.gameTime[0], --that.totalTime);
                 if (that.totalTime === 0) {
                     clearInterval(t);
