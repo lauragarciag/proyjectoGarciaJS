@@ -76,7 +76,11 @@ function validaPollo(){
     while (i < cantidad) {
         if(perro.x == pollo.x[i] && perro.y == pollo.y[i]){
             console.log("PERDISTE POLLO");
-            alert("Perdiste por un POLLO");
+            Swal.fire({
+                title: ':-(',
+                text: '¡Perdiste por un pollo!',
+                icon: 'error',
+            })
             cargarFondo();
         }
         i++;
@@ -88,7 +92,11 @@ function validaCerdo(){
     while (i < cantidad) {
         if(perro.x == cerdo.x[i] && perro.y == cerdo.y[i]){
             console.log("PERDISTE CERDO");
-            alert("Perdiste por un CERDO");
+            Swal.fire({
+                title: ':-(',
+                text: '¡Perdiste por un cerdo!',
+                icon: 'error',
+            })
             cargarFondo();
         }
         i++;
@@ -100,7 +108,11 @@ function validaVaca(){
     while (i < cantidad) {
         if(perro.x == vaca.x[i] && perro.y == vaca.y[i]){
             console.log("PERDISTE VACA")
-            alert("Perdiste por una VACA");
+            Swal.fire({
+                title: ':-(',
+                text: '¡Perdiste por una vaca!',
+                icon: 'error',
+            })
             cargarFondo();
         }
         i++;
