@@ -120,9 +120,14 @@ window.onload = function () {
                     for (var i = 0, j = that.mouses.length; i < j; ++i) {
                         that.mouses[i].style.display = 'none';
                     }
-                    if (that.score < 0) that.score = 0;
-                    alert('Game over.\nYour score：' + that.score);
-                }
+                    if (that.score < 0) that.score = 0; 
+                    Swal.fire({
+                        title: '¡Terminó el juego!',
+                        text: 'Tu puntaje: ' + that.score,
+                        icon: 'warning',
+                        confirmButtonText: ':-)'
+                    })                                 
+              }
             }, 1000);
         },
 
