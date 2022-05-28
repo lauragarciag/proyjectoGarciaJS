@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&display=swap');
+
+.allBody {
+    font-family: Caveat, cursive;
+    font-family: Indie Flower, cursive;
+    font-size: 20px;
+    color:blue;
+    background-color: white;
+}
+
+.header {
+    font-size: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: space-around;
+    margin-right: 5px;
+    background-color: #eff0e9;
+    color: #1276c7;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.jug {
+
+    margin-left: 80px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 100;
+
+}
+
+.texto_inic {
+    margin-top: 10px;
+    margin-left: 300px;
+    font-size: 30px;
+    background-color: #eff0e9;
+
+}
+
+.Gato {
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+	
+}
+
+
+@CHARSET "ISO-8859-1";
+
+#body{
+	position:absolute;
+	width: 550px;
+	height: 550px;
+	left: 50%;
+	top: 50%;
+	margin-left: -275px;
+	margin-top: -275px;
+	-moz-box-shadow: 2px 2px 3px 3px black;
+	-webkik-box-shadow:2px 2px 3px 3px black;
+}
+
+.marcado{
+	width:150px;
+	height:150px;
+	border:none;
+	position:absolute;
+	font-size:100px;
+	color:white;
+	background-color: #0708086b;
+}
+
+.botones{
+	width:150px;
+	height:150px;
+	border:none;
+	position:absolute;
+	font-size:100px;
+	color:white;
+	background-color: #0000ff63;
+}
+
+.botones:HOVER {
+	width:150px;
+	height:150px;
+	border:none;
+	position:absolute;
+	font-size:100px;
+	color:white;
+	background-color: #bb22117d;
+}
+
+#b11{
+	top:25px;
+	left:25px;
+}
+
+#b12{
+	top:25px;
+	left:200px;
+}
+
+#b13{
+	top:25px;
+	left:375px;
+}
+
+#b21{
+	top:200px;
+	left:25px;
+}
+
+#b22{
+	top:200px;
+	left:200px;
+}
+
+#b23{
+	top:200px;
+	left:375px;
+}
+
+#b31{
+	top:375px;
+	left:25px;
+}
+
+#b32{
+	top:375px;
+	left:200px;
+}
+
+#b33{
+	top:375px;
+	left:375px;
+}
